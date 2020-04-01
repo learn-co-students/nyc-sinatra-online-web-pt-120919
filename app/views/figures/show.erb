@@ -1,0 +1,16 @@
+<h1>Shows the Selected Figure</h1>
+<p><b>Figure Name: </b><%= @figure.name %></p>
+
+<p><b>Figure Titles:</b></p>
+<% @figure.titles.each.with_index(1) do |title, i| %>
+<p><%= "#{i}. #{title.name}" %></p>
+<% end %>
+
+<p><b>Figure Landmarks:</b></p>
+<% @figure.landmarks.each.with_index(1) do |landmark, i| %>
+<p><%= "#{i}. #{landmark.name}" %></p>
+<% end %>
+
+<p><a class="button" href="/figures/<%= @figure.id %>/edit">Edit Figure</a></p>
+<p><a class="button" href="/figures">Figures</a></p>
+<p><a class="button" href="/">Home</a></p>
